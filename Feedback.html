@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - Cultural Heaven</title>
+    <link rel="stylesheet" href="Feedback.css">
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show the confirmation message
+            const confirmationMessage = document.getElementById('confirmation-message');
+            confirmationMessage.style.display = 'block';
+
+            // Optionally, you can also clear the form fields
+            document.getElementById('feedback-form').reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedback-form" onsubmit="showConfirmation(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="confirmation-message" style="display:none; color: green; text-align: center; margin-top: 20px;">
+            Your feedback has been submitted successfully!
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cultural Heaven</title>
+    <link rel="stylesheet" href="Login.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform any necessary validation here
+
+            // Redirect to index.html after "logging in"
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
